@@ -68,7 +68,7 @@ impl CookieStoreMutex {
             .map(|store| CookieStoreMutex::new(path, store))
     }
 
-    fn cookies_to_str(&self) -> Result<String, serde_json::Error> {
+    pub fn cookies_to_str(&self) -> Result<String, serde_json::Error> {
         let mut cookies = Vec::new();
         for cookie in self
             .store
