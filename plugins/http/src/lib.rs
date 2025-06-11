@@ -21,6 +21,7 @@ mod scope;
 #[cfg(feature = "cookies")]
 const COOKIES_FILENAME: &str = ".cookies";
 
+#[derive(Debug)]
 pub struct Http {
     #[cfg(feature = "cookies")]
     pub cookies_jar: std::sync::Arc<crate::reqwest_cookie_store::CookieStoreMutex>,
